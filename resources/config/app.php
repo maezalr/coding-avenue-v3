@@ -12,8 +12,8 @@ $_SESSION['__picture__'];
 session_start();
 
 //App Name
-define("APP_NAME", "Coding Avenue");
-define("BASE_NAME", "/coding-avenue-v3");
+define("APP_NAME", "Coding Avenue"); //Brand name and title
+define("BASE_NAME", "/coding-avenue-v3"); //Name of the directory created under htdocs
 
 //Database Connection
 define("DB_HOST", "localhost");
