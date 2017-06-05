@@ -12,4 +12,4 @@ INSTALLATION:
 5. Visit PHPMyAdmin and create a database named "coding_avenue".
 6. Import the sql file "coding_avenue.sql" into the database "coding_avenue". This will create database tables.
 7. Open XAMPP Control Panel and run Apache and MySQL services.
-8. Access app on the web browser: http:/[hostname]/coding-avenue-v3/
+8. Access app on the web browser: http://[hostname]/coding-avenue-v3/
