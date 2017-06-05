@@ -13,3 +13,4 @@ INSTALLATION:
 6. Import the sql file "coding_avenue.sql" into the database "coding_avenue". This will create database tables.
 7. Open XAMPP Control Panel and run Apache and MySQL services.
 8. Access app on the web browser: http://[hostname]/coding-avenue-v3/
+9. If you need to add more fake posts, just run: http://[hostname]/coding-avenue-v3/faker.php.
