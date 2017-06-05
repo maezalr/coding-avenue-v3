@@ -4,7 +4,7 @@ function onSignIn(googleUser) {
 	xhr.open('POST', 'resources/auth/verifytoken.php');
 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 	xhr.onload = function() {
-		if(xhr.responseText == "TRUE") window.location.replace("admin.php");
+		if(xhr.responseText == "TRUE") window.location.replace('/coding-avenue-v3/');
 	};
 	xhr.send('idtoken=' + id_token);
 }

@@ -11,11 +11,10 @@ include_once('resources/app/db/sqlfunc.php');
 include_once('resources/app/functions/parsedown.php');
 include_once('resources/app/functions/defines.php');
 
-//Header HTML
-include_once('resources/layout/header.php');
-
 $id = false;
 $post = false;
+
+$page = $_GET['page'];
 
 if(isset($_GET['id']) && strlen($_GET['id']))
 	$id = $_GET['id'];
@@ -27,14 +26,14 @@ if($id)
 <div class="panel panel-default">
 	<div class="panel-body" id="posts">
 
-	<button type='button' onclick="window.history.back();" class='btn btn-link btn-xs' style="float: left;">Back to Main</button>
+	<a href="main.php?page=<?=$page?>" type='button' class='btn btn-link btn-xs' style="float: left;">Back to Main</a>
 
 		<hr />	
 
 	<?
 
 		if($post) 
-			renderPost($post, TRUE);
+			renderPost($post, $page, TRUE);
 		else 
 			echo "No post to show on this page.";
 
@@ -42,9 +41,3 @@ if($id)
 
 	</div>
 </div>
-<?
-
-//Footer HTML
-include_once('resources/layout/footer.php');
-
-?>

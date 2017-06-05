@@ -13,9 +13,6 @@ include_once('resources/app/db/sqlfunc.php');
 //Custom functions
 include_once('resources/app/functions/defines.php');
 
-//Header HTML
-include_once('resources/layout/header.php');
-
 $posts = getUserPosts($_SESSION['__email__']);
 
 ?>
@@ -58,7 +55,3 @@ $posts = getUserPosts($_SESSION['__email__']);
 	    </table>
 	</div>
 </div>
-<?
-//Footer HTML
-include_once('resources/layout/footer.php');
-?>

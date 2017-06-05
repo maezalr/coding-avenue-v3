@@ -121,7 +121,7 @@ function renderActionResult($actionresult) {
 }
 
 //Post rendering
-function renderPost($post, $individual = false) {
+function renderPost($post, $page, $individual = false) {
 
 	$Parsedown = new Parsedown();	
 
@@ -146,7 +146,7 @@ function renderPost($post, $individual = false) {
 
 		if(!$individual) 
 			echo $Parsedown->text(nl2br(wordsCut($post['body'], 100))) ."
-				<a href='post.php?id=". $post['id'] ."' type='button' class='btn btn-default btn-xs'>Read More</a>";
+				<a href='post.php?id=". $post['id'] ."&page=". $page ."' type='button' class='btn btn-default btn-xs'>Read More</a>";
 		else 
 			echo $Parsedown->text(nl2br($post['body']));
 	
@@ -187,7 +187,7 @@ function pagination($currPage) {
 
 	//Previous button
 	$disable = ($currPage == 1) ? 'disabled active' : ''; 
-	echo "<a href='?page=".($currPage - 1)."' type='button' class='btn btn-default btn-xs {$disable}' style='margin: 2px 2px;'>Previous</a>";
+	echo "<a href='main.php?page=".($currPage - 1)."' type='button' class='btn btn-default btn-xs {$disable}' style='margin: 2px 2px;'>Previous</a>";
 
 	if($min > 1) {
 		echo ". . . ";
@@ -196,7 +196,7 @@ function pagination($currPage) {
 	//Numbered buttons
 	for($i = $minpage; $i <= $maxpage; $i++) {
 		$disable = ($currPage == $i) ? 'disabled active' : ''; 
-		echo "<a href='?page={$i}' type='button' class='btn btn-default btn-xs {$disable}' style='margin: 2px 2px; min-width: 30px;'>{$i}</a>";
+		echo "<a href='main.php?page={$i}' type='button' class='btn btn-default btn-xs {$disable}' style='margin: 2px 2px; min-width: 30px;'>{$i}</a>";
 	}
 
 	if($max < $pages) {
@@ -205,7 +205,7 @@ function pagination($currPage) {
 
 	//Next button
 	$disable = ($currPage == $pages) ? 'disabled active' : ''; 
-	echo "<a href='?page=".($currPage + 1)."' type='button' class='btn btn-default btn-xs {$disable}' style='margin: 2px 2px;'>Next</a>";
+	echo "<a href='main.php?page=".($currPage + 1)."' type='button' class='btn btn-default btn-xs {$disable}' style='margin: 2px 2px;'>Next</a>";
 
 	echo "</div>";
 

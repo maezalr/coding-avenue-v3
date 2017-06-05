@@ -16,38 +16,11 @@ include_once('resources/layout/header.php');
 
 ?>
 
-<div class="panel panel-default">
-	<div class="panel-body" id="posts">
+<div id="content" class="col-md-10 col-md-offset-1">  
 
-	<hr />
-
-	<?
-
-		$page = (isset($_GET['page']) && strlen($_GET['page']) > 0) ? $_GET['page'] : 1;
-
-		$posts = getPosts($page);		
-
-		if(count($posts) > 0) {
-			
-			foreach($posts as $post) {
-				renderPost($post);
-			} 
-			
-			pagination($page);
-
-		}
-		else {
-			echo "No post to show on this page.";
-		}
-
-	?>
-	</div>
 </div>
 
 <?
-
-if(count($posts) > 0) echo "<br /><br />";
-
 //Footer HTML
 include_once('resources/layout/footer.php');
 

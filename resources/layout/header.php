@@ -16,14 +16,6 @@
     <!-- Styles -->
     <link href="resources/css/app.css" rel="stylesheet">
     
-    <!-- Template -->
-    <script src="resources/js/app.js"></script>
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Google Sign In -->
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="resources/js/gplus.js"></script>
-    
 </head>
 <body>
     <div id="app">
@@ -31,7 +23,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <b>
-                        <a class="navbar-brand" href="<?=BASE_NAME?>" <? if(!empty($_SESSION['__email_verified__'])) { ?>style="padding: 11px 15px;"<? } ?>>
+                        <a href="main.php" class="navbar-brand" <? if(!empty($_SESSION['__email_verified__'])) { ?>style="padding: 11px 15px;"<? } ?>>
                             <?=APP_NAME?>
                         </a>
                     </b>
@@ -75,5 +67,4 @@
             </div>
         </nav>
         <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">                    
+            <div class="row">                                

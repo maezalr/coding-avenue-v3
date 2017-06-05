@@ -13,7 +13,7 @@ session_start();
 
 //App Name
 define("APP_NAME", "Coding Avenue");
-define("BASE_NAME", "/coding-avenue-v2");
+define("BASE_NAME", "/coding-avenue-v3");
 
 //Database Connection
 define("DB_HOST", "localhost");

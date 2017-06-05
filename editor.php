@@ -12,9 +12,6 @@ include_once('resources/app/db/sqlfunc.php');
 //Custom functions
 include_once('resources/app/functions/defines.php');
 
-//Header HTML
-include_once('resources/layout/header.php');
-
 $id = false;
 $post = false;
 
@@ -43,12 +40,6 @@ if($id)
 	
 </div>
 
-<!-- Editor CDNs -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
-<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.7.1/showdown.min.js"></script>
-
 <script>
 
 //Initialize Markdown Converter
@@ -67,11 +58,3 @@ var simplemde = new SimpleMDE({
 });
 
 </script>
-
-<!-- Actions -->
-<script src="resources/js/action.js"></script>
-
-<?
-//Footer HTML
-include_once('resources/layout/footer.php');
-?>
